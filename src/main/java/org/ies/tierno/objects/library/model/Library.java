@@ -12,6 +12,15 @@ public class Library {
         this.books = books;
     }
 
+    public Book findBook(long isbn) {
+        for (var book : books) {
+            if (book.getIsbn() == isbn) {
+                return book;
+            }
+        }
+        return null;
+    }
+
     public int countYearBooks(int year) {
         int count = 0;
         for (var book : books) {
