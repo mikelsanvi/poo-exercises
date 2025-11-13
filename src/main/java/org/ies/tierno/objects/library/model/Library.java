@@ -12,10 +12,20 @@ public class Library {
         this.books = books;
     }
 
+    public int countYearBooks(int year) {
+        int count = 0;
+        for (var book : books) {
+            if (book.getYear() == year) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public int countBooks(String authorNif) {
         int count = 0;
-        for (var book: books) {
-            if(book.hasAuthor(authorNif)) {
+        for (var book : books) {
+            if (book.hasAuthor(authorNif)) {
                 count++;
             }
         }
@@ -33,7 +43,7 @@ public class Library {
 
     public boolean hasAuthor(String nif) {
         for (var book : books) {
-            if(book.hasAuthor(nif)) {
+            if (book.hasAuthor(nif)) {
                 return true;
             }
         }
