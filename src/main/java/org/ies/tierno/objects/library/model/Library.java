@@ -12,6 +12,16 @@ public class Library {
         this.books = books;
     }
 
+    public int countBooks(String authorNif) {
+        int count = 0;
+        for (var book: books) {
+            if(book.hasAuthor(authorNif)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
     public boolean hasBook(long isbn) {
         for (var book : books) {
             if (book.getIsbn() == isbn) {
@@ -29,6 +39,7 @@ public class Library {
         }
         return false;
     }
+
 
     public String getName() {
         return name;
