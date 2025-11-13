@@ -16,6 +16,18 @@ public class LibraryMain {
 
         Library library = libraryReader.read();
 
+        if (library.hasBook(1001)) {
+            var book = library.findBook(1001);
+            System.out.println(book);
+        } else {
+            System.out.println("No se ha encontrado el libro 1001");
+        }
 
+        if (library.hasAuthor("001X")) {
+            int authorBooks = library.countBooks("001X");
+            System.out.println("El autor 001X tiene " + authorBooks + " libros");
+        } else {
+            System.out.println("No se ha encontrado al autor");
+        }
     }
 }
