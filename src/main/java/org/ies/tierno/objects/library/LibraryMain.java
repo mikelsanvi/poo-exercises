@@ -7,7 +7,7 @@ import org.ies.tierno.objects.library.readers.LibraryReader;
 
 import java.util.Scanner;
 
-public class Main {
+public class LibraryMain {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
         var authorReader = new AuthorReader(scanner);
@@ -16,8 +16,6 @@ public class Main {
 
         Library library = libraryReader.read();
 
-        if(library.hasAuthor("01X")) {
-            System.out.println("Existe el autor");
-        }
+
     }
 }

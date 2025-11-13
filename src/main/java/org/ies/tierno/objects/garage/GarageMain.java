@@ -6,7 +6,7 @@ import org.ies.tierno.objects.garage.readers.VehicleReader;
 
 import java.util.Scanner;
 
-public class Main {
+public class GarageMain {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
         var vehicleReader = new VehicleReader(scanner);

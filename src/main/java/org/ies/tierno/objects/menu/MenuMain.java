@@ -2,7 +2,7 @@ package org.ies.tierno.objects.menu;
 
 import java.util.Scanner;
 
-public class Main {
+public class MenuMain {
     private final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
